@@ -1,0 +1,180 @@
+/* ========== Container & Layout ========== */
+.search-container {
+  min-height: 100vh;
+  font-family: "Poppins", Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+  background: linear-gradient(180deg, #ffffff 0%, #f4fff7 100%);
+}
+
+/* ========== Toast ========== */
+.toast {
+  position: fixed;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 16px 32px;
+  border-radius: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.13);
+  font-weight: 500;
+  font-size: 16px;
+  z-index: 9999;
+  min-width: 200px;
+  text-align: center;
+  color: #222;
+}
+
+.toast.info {
+  background-color: #a3e635;
+}
+
+.toast.success {
+  background-color: #4ade80;
+}
+
+.toast.error {
+  background-color: #f87171;
+}
+
+/* ========== Search Bar ========== */
+.search-form {
+  display: flex;
+  align-items: center;
+  background: #eaf6ea;
+  border-radius: 50px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13), 0 1.5px 0 #fff inset;
+  padding: 0 32px;
+  width: 95vw;
+  max-width: 600px;
+  height: 72px;
+  transition: transform 0.2s ease;
+  position: relative;
+}
+
+.search-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: #a3e635;
+  border-radius: 50%;
+  margin-right: 20px;
+  box-shadow: 0 2px 8px rgba(163, 230, 53, 0.18);
+  transition: transform 0.3s ease;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 22px;
+  color: #555;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  height: 48px;
+}
+
+/* ========== Voice Button ========== */
+.voice-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.voice-icon {
+  width: 28px;
+  height: 28px;
+  animation: none;
+}
+
+.voice-icon.listening {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.mic-button {
+    border: none;
+    background-color: transparent;
+}
+/* ========== Loading Dots ========== */
+.loading {
+  /* margin-top: 32px; */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.loading-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #a3e635;
+  animation: bounce 0.8s infinite;
+}
+
+.loading-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* ========== Results ========== */
+.results-list {
+  width: 90vw;
+  max-width: 600px;
+  margin: 32px auto 0;
+  padding: 0;
+  list-style: none;
+}
+
+.result-item {
+  margin: 20px 0;
+}
+
+.result-item a {
+  color: #256029;
+  font-weight: 600;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.result-item p {
+  color: #333;
+  margin-top: 4px;
+}
+
+.result-item small {
+  color: #00000091;
+}
